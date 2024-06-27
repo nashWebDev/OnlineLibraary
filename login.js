@@ -1,6 +1,7 @@
 var emailArray=[
     "test@example.com",
     "user123@gmail.com",
+    "user123@gmail.com.",
     "john.doe@example.org",
     "jane_doe@hotmail.com",
     "info@website.com"
