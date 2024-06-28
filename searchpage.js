@@ -1,3 +1,18 @@
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+
 var booksArray = [
     {
         title: "To Kill a Mockingbird",
@@ -42,33 +57,33 @@ var booksArray = [
 
 
 
-    var p = document.createElement("p");
-    var a = document.createElement("a");
     function listArray(book) {
-        var p = document.createElement("p");
-        p.classList.add("bookTitle");
-        p.innerHTML = book.title;
+        var h4 = document.createElement("h4");
+        h4.classList.add("bookTitle");
+        h4.innerHTML = book.title;
     
         var catalogueBox = document.getElementById("catalogue");
     
         var a = document.createElement("a");
     
-        a.classList.add("bookbox2");
         a.href = "form.htm";
     
         a.style.backgroundImage = `url(${book.image})`;
     
-        var div = document.createElement("div");
-        div.classList.add("imgContainer");
-    
-        a.appendChild(div);
-        div.appendChild(p);
+        a.appendChild(h4);
+
+        // a.addEventListener("mouseover" ,function(){
+        //     a.style.filter ="blur(2px)"
+        //     p.style.display = "block"
+        //     p.style.filter = "blur(0)"
+        // })
+
     
         catalogueBox.appendChild(a);
     
         a.addEventListener("click", function(event) {
             event.preventDefault();
-            var bookTitle = p.innerHTML;
+            var bookTitle = h4.innerHTML;
             var bookingSystemTitles = { "title": bookTitle };
             console.log(bookingSystemTitles);
             localStorage.setItem("booktitle", JSON.stringify(bookingSystemTitles));

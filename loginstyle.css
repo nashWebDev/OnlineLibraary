@@ -7,9 +7,10 @@
   }
 
 body{
+    position: relative;
     padding: 0;
     margin: 0;
-    background-image: url(img/bereaBuilding\ \(1\).png);
+    background-image: url(img/DSC_0021.jpg);
     background-attachment: fixed;
     background-size: cover;
 }
@@ -68,32 +69,40 @@ section h1{
     font-family: "Roboto Slab", serif;
 }
 
-.loginBox{
+.loginBox {
+    position: relative;
     border: 2px solid black;
-
+    border-radius: 20px;
+    background-color: var(--white);
     text-align: center;
     justify-content: center;
-    padding: 2,5%;
+    width: 100%; /* Adjust width as needed */
+    margin: auto; /* Center the login box horizontally */
+    padding: 5%;
 }
 
-.loginBox form{
+.loginBox form {
     padding: 10px;
     margin: 5px;
 }
 
-.loginBox input[type = "text"]{
+.loginBox input[type="text"] {
     padding: 5px;
+    border-radius: 5px;
     margin: 5px;
     border: 2px solid black;
 }
-.loginBox input[type = "submit"]{
-    border: 2px solid black;
-    padding: 5px;
-    margin: 5px;
-    bottom: 0;
-    border-radius: 20px;
 
+.loginBox input[type="submit"] {
+    width: 100%;
+    border: 2px solid black;
+    padding: 5px;
+    margin-top: 10px; /* Space between input text and submit button */
+    border-radius: 20px;
+    position: relative;
+    bottom: -15px;
 }
+
 
 footer{
     border: 2px solid black;
