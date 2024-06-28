@@ -46,6 +46,28 @@ nav img{
 .pages {
     width: 100%;
 }
+nav .pages{
+  display: flex;
+  justify-content: center;
+}
+
+.loginbutton{
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--Bereablue);
+  background-color: white;
+  box-shadow: 0 1px 1px white;
+  padding: 5px;
+  height: 65%;
+  cursor:context-menu;
+  justify-content: center;
+  font-size: larger;
+  text-align: center;
+  color: black;
+  border-radius: 5px;
+  font-weight: 500;
+
+}
 
 .pages a {
     float: right;

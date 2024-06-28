@@ -13,8 +13,9 @@ var logform =document.getElementById("log")
 
         var studId = document.getElementById("studentId").value;
         var email = document.getElementById("email").value;
+        var user = document.getElementById("name").value;
 
-        var bookingSystemLoginVal ={"studentID":studId,"email":email}
+        var bookingSystemLoginVal ={"user":user,"studentID":studId,"email":email}
 
         localStorage.setItem('loginFormvalsForBookingSystem' , JSON.stringify(bookingSystemLoginVal))
 

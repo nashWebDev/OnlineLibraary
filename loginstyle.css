@@ -22,7 +22,22 @@ header{
     padding: 5px;
     z-index: 5px;
     margin: 5px;
+    animation: faze1;
+    animation-duration: 3s;
+    animation-delay: 1,5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; 
 }
+@keyframes faze1 {
+    from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+  }
+
+
 nav{
     display: flex;
     align-items: center;
@@ -62,16 +77,56 @@ nav img{
     flex-wrap: wrap;
     justify-content: space-evenly;
     height: 50%;
+    
 }
 
 section h1{
     font-size: 50px;
     font-family: "Roboto Slab", serif;
+    
 }
+
+#s1{
+    animation: slidein1;
+    animation-duration: 3s;
+    animation-delay: 1,5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; 
+}
+@keyframes slidein2 {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+#s2{
+    animation: slidein2;
+    animation-duration: 3s;
+    animation-delay: 1,5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slidein1 {
+    0% {
+      transform: translateY(-50%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+
+
+
+
 
 .loginBox {
     position: relative;
     border: 2px solid black;
+    box-shadow: 0 2px 2px black;
     border-radius: 20px;
     background-color: var(--white);
     text-align: center;
@@ -111,4 +166,17 @@ footer{
     display: flex;
     padding: 10px;
     margin: 5px;
+    animation: faze2;
+    animation-duration: 3s;
+    animation-delay: 1,5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; 
 }
+@keyframes faze2 {
+    from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+  }

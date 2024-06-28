@@ -1,3 +1,13 @@
+document.addEventListener("DOMContentLoaded",function(){
+    var username = document.getElementById("user")
+    var valsFromLoginForm = JSON.parse(localStorage.getItem("loginFormvalsForBookingSystem"))
+
+
+    username.innerHTML = valsFromLoginForm.user;
+})
+
+
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
