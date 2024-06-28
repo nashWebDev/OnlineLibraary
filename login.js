@@ -19,12 +19,19 @@ var logform =document.getElementById("log")
 
         localStorage.setItem('loginFormvalsForBookingSystem' , JSON.stringify(bookingSystemLoginVal))
 
-        if(emailArray.includes(email)){
-            window.location.href ='seachpage.htm'
-        }else{
-            alert("email is not officially registered by berea")
+        if (emailArray.includes(email)) {
+            setTimeout(function() {
+                document.body.style.transition = "opacity 2s"; // Add a transition effect
+                document.body.style.opacity = 0;
+            }, 0); // Set the timeout to 0 to start the transition immediately
+            
+            setTimeout(function() {
+                window.location.href = 'seachpage.htm'; // Navigate to the new page after the transition
+            }, 900); // Delay the navigation to allow the fade-out effect to complete
+        } else {
+            alert("Email is not officially registered by Berea");
         }
-    
+        
 })  
 
 //method to prevent use of nav unless logged in

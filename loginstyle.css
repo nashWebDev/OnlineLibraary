@@ -13,6 +13,7 @@ body{
     background-image: url(img/DSC_0021.jpg);
     background-attachment: fixed;
     background-size: cover;
+    
 }
 header{
     border: 2px solid black ;
@@ -27,6 +28,7 @@ header{
     animation-delay: 1,5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards; 
+    transition: opacity 2s;
 }
 @keyframes faze1 {
     from {
@@ -103,6 +105,8 @@ section h1{
   }
 
 #s2{
+   color: rgb(250, 196, 59);
+   text-shadow: 0 2px 2px black;
     animation: slidein2;
     animation-duration: 3s;
     animation-delay: 1,5s;
@@ -128,7 +132,7 @@ section h1{
     border: 2px solid black;
     box-shadow: 0 2px 2px black;
     border-radius: 20px;
-    background-color: var(--white);
+    background-color:rgba(255, 255, 255, 0.8);
     text-align: center;
     justify-content: center;
     width: 100%; /* Adjust width as needed */

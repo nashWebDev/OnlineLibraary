@@ -10,10 +10,23 @@ body{
   scroll-behavior: smooth;
     padding: 0;
     margin: 0;
-    background-image: url();
-    background-size: cover;
     overflow-x: hidden;
+    animation: faze1;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; 
+    
 }
+@keyframes faze1 {
+  from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
 
 /*header*/
 header {
@@ -55,7 +68,7 @@ nav .pages{
   display: flex;
   align-items: center;
   border: 2px solid var(--Bereablue);
-  background-color: white;
+  background-color: 255 255 255 0.1;
   box-shadow: 0 1px 1px white;
   padding: 5px;
   height: 65%;
@@ -207,6 +220,21 @@ h2{
     }
   }*/
 /*search and canva for results*/
+.glassy-title {
+  color: white; /* Text color */
+  font-size: 3em; /* Adjust the size as needed */
+  font-family: 'Arial', sans-serif; /* Adjust the font as needed */
+  text-align: center; /* Center the title */
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  border-radius: 10px; /* Rounded corners */
+  backdrop-filter: blur(10px); /* Apply blur effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: Add text shadow for better readability */
+
+  margin: 20px auto; /* Center horizontally with margin */
+}
+
 .seachbox{
     margin-top: 5%;    
 }
