@@ -94,10 +94,21 @@ var booksArray = [
         a.addEventListener("click", function(event) {
             event.preventDefault();
             var bookTitle = h4.innerHTML;
-            var bookingSystemTitles = { "title": bookTitle };
+            var bookcover = book.image
+            var bookingSystemTitles = { "title": bookTitle , "cover":bookcover };
             console.log(bookingSystemTitles);
             localStorage.setItem("booktitle", JSON.stringify(bookingSystemTitles));
-            window.location = "form.htm";
+
+                document.body.style.transition = "opacity 2s"; // Add a transition effect
+                document.body.style.opacity = 0;
+            
+            
+            setTimeout(function() {
+                window.location = "applicationForm.htm"; // Navigate to the new page after the transition
+            }, 900); // Delay the navigation to allow the fade-out effect to complete
+
+
+            
         });
     }
     

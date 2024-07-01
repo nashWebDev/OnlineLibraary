@@ -1,82 +1,58 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
     --Bereablue: #27348b;
     --white: #ffffff;
+    --bereagray:#6D6E71;
   }
 
 body{
-    position: relative;
+  scroll-behavior: smooth;
+  background-image: url(img/DSC_0021.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
     padding: 0;
     margin: 0;
-    background-image: url(img/DSC_0021.jpg);
-    background-attachment: fixed;
-    background-size: contain;
-    image-rendering: optimizeSpeed;
-    background-attachment: fixed;
-    background-size: cover;
+    margin-bottom: 10px;
+    overflow-x: hidden;
+    animation: faze1;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; 
     
 }
+@keyframes faze1 {
+  from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
 header{
-    border: 2px solid black ;
-    background-color: var(--Bereablue);
-    color: white;
     display: flex;
     padding: 5px;
-    z-index: 5px;
-    margin: 5px;
+    border: 2px solid black;
+    background-color: var(--Bereablue);
+    color: whitesmoke;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-    animation: faze1;
-    animation-duration: 3s;
-    animation-delay: 1,5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards; 
-    transition: opacity 2s;
+    text-align: center;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
 }
-@keyframes faze1 {
-    from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-  }
-
-
-
-
-nav{
-    display: flex;
-    align-items: center;
-    margin: 5px;
+#stateofBook{
     width: 100%;
-}
+    text-align: center;
 
-nav img{
-    border: 2px solid black;
-    clip-path: circle();
-    width: 50px;
-    height: 50px;
-}
-.pages {
-    width: 100%;
-}
-
-.pages a {
-    float: right;
-    margin: 5px;
-    padding: 5px;
-    color: var(--white); /* Ensure to define this variable */
-    text-decoration: none;
-    transition: transform 0.5s ease;
-}
-
-.pages a:hover {
-    transform: translateY(-10px); /* Adjust the value to control the slide distance */
-    text-decoration: underline;
 }
 
 
@@ -90,6 +66,8 @@ nav img{
     height: 50%;
     
 }
+
+
 
 section h1{
     font-size: 50px;
@@ -119,25 +97,7 @@ section h1{
 #s2{
    color: rgb(250, 196, 59);
    text-shadow: 0 2px 2px black;
-    animation: slidein2;
-    animation-duration: 3s;
-    animation-delay: 1,5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
 }
-
-@keyframes slidein1 {
-    0% {
-      transform: translateY(-50%);
-    }
-    100% {
-      transform: translateY(0%);
-    }
-  }
-
-
-
-
 
 .loginBox {
     position: relative;
@@ -156,6 +116,10 @@ section h1{
     padding: 10px;
     margin: 5px;
 }
+.loginBox form p {
+    margin: 3px;
+    padding: 3px;
+}
 
 .loginBox input[type="text"] {
     padding: 5px;
@@ -164,7 +128,7 @@ section h1{
     border: 2px solid black;
 }
 
-.loginBox input[type="submit"] {
+.btn {
     width: 100%;
     border: 2px solid black;
     padding: 10px;
@@ -182,43 +146,90 @@ section h1{
     transition: 0.5s;
 }
 
-.loginBox input[type="submit"]:hover{
+.btn:hover{
   box-shadow: 0 9px var(--Bereablue);
 }
 
-.loginBox input[type="submit"]:active {
+.btn:active {
   background-color: var(--Bereablue);
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 
-footer{
-    border: 2px solid black;
-    background-color: var(--Bereablue);
-    color: var(--white);
+
+img{
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    box-shadow: 0 1px 2px black;
+}
+
+#begone{
+  display: block;
+}
+
+#revealafter{
+  display: none;
+}
+
+#appStatus{
+
     display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     padding: 10px;
     margin: 5px;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    animation: faze2;
-    animation-duration: 3s;
-    animation-delay: 1,5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards; 
 }
-@keyframes faze2 {
-    from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-  }
+#appStatus h1{
+    border: 2px solid black;
+    background-color: rgb(255, 255, 255 , 0.5);
+    box-shadow: 5px 5px 5px lightgreen;
+}
 
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
 
+.receipt{
+    border: 2px solid black;
+    background-color:rgba(255, 255, 255, 0.8);
+    width:50%;
+    padding: 5px;
+}
+
+#btn2 {
+    width: 50%;
+    border: 2px solid black;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: black;
+    background-color: rgb(255, 255, 255 , 0,5);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    position: relative;
+    bottom: -15px;
+    transition: 0.5s;
+    margin-bottom: 20px;
+}
+
+#btn2:hover{
+  box-shadow: 0 9px var(--Bereablue);
+}
+
+#btn2:active {
+  background-color: var(--Bereablue);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -232,14 +243,9 @@ footer{
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--Bereablue);
-  border-radius: 20px;
-  height: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--Bereablue);
-}
-::-webkit-scrollbar-button{
-  background-color: var(--Bereablue);
 }
