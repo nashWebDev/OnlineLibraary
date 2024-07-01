@@ -55,7 +55,7 @@ function autofiller(){
                 returndate = document.getElementById("returnDate").value
 
                 prtrentdate.innerHTML = "pickup date : " + rentdate;
-                prtreturndate.innerHTML = "pickup date : " + returndate;
+                prtreturndate.innerHTML = "return date : " + returndate;
 
 
 }
