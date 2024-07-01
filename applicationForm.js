@@ -76,6 +76,7 @@ function dataValidation(rentDate, returnDate) {
     if (dayDif < 0) {
         alert('You can\'t go back in time');
     }else{
+    autofiller()
     let revealafter = document.getElementById("revealafter");
     let begonAfter = document.getElementById("begone")
     begonAfter.style.display = "none"
