@@ -7,13 +7,14 @@ var emailArray=[
 ];
 
 var logform =document.getElementById("log")
+var log2 = document.getElementById("log2")
 
-    document.addEventListener("submit",function(event){
+    logform.addEventListener("submit",function(event){
         event.preventDefault()
 
-        var studId = document.getElementById("studentId").value;
-        var email = document.getElementById("email").value;
-        var user = document.getElementById("name").value;
+        let studId = document.getElementById("studentId").value;
+        let email = document.getElementById("email").value;
+        let user = document.getElementById("name").value;
 
         var bookingSystemLoginVal ={"user":user,"studentID":studId,"email":email}
 
@@ -33,6 +34,34 @@ var logform =document.getElementById("log")
         }
         
 })  
+
+log2.addEventListener("submit",function(event){
+    event.preventDefault()
+
+    let studId = document.getElementById("studentId2").value;
+    let email = document.getElementById("email2").value;
+    let user = document.getElementById("name2").value;
+
+    var bookingSystemLoginVal ={"user":user,"studentID":studId,"email":email}
+
+    localStorage.setItem('loginFormvalsForBookingSystem' , JSON.stringify(bookingSystemLoginVal))
+
+    if (emailArray.includes(email)) {
+        setTimeout(function() {
+            document.body.style.transition = "opacity 2s"; // Add a transition effect
+            document.body.style.opacity = 0;
+        }, 0); // Set the timeout to 0 to start the transition immediately
+        
+        setTimeout(function() {
+            window.location.href = 'seachpage.htm'; // Navigate to the new page after the transition
+        }, 900); // Delay the navigation to allow the fade-out effect to complete
+    } else {
+        alert("Email is not officially registered by Berea");
+    }
+    
+})  
+
+
 
 //method to prevent use of nav unless logged in
 

@@ -156,5 +156,16 @@ function showSlides() {
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 3500); // Change image every 2 seconds
 }
+var body = document.querySelector("body")
 
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    
+    body.style.opacity = 0.5
 
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    body.style.opacity = 1
+  }
