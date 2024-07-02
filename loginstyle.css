@@ -4,7 +4,7 @@
     --white: #ffffff;
 }
 
-body {
+body{
     position: relative;
     padding: 0;
     margin: 0;
@@ -68,7 +68,9 @@ nav img {
     transform: translateY(-10px);
     text-decoration: underline;
 }
-
+.mobile{
+  display: none;
+}
 .mainview {
     display: flex;
     align-items: center;
@@ -126,7 +128,7 @@ section h1 {
     justify-content: center;
     padding: 5%;
     margin: auto;
-    width: 100%;
+    width: 50%;
 }
 
 .loginBox form {
@@ -270,9 +272,7 @@ footer {
 
 @media only screen and (max-width: 480px) {
     .pages a {
-        margin: 5px;
-        padding: 5px;
-        font-size: 1em;
+        display: none;
     }
 
     nav img {
@@ -280,14 +280,21 @@ footer {
         height: 30px;
     }
 
-    section h1 {
-        font-size: 1.2em;
+    .mainview{
+      display: none;
     }
-
-    .loginBox {
-        padding: 15%;
+    .mobile{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 5px;
+      margin: 5px;
+      
     }
-
+    .loginBox{
+      width: 100%;
+    }
     footer {
         display: none;
     }
