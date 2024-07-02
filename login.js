@@ -8,7 +8,7 @@ var emailArray=[
 
 var logform =document.getElementById("log")
 
-    logform.addEventListener("submit",function(event){
+    document.addEventListener("submit",function(event){
         event.preventDefault()
 
         var studId = document.getElementById("studentId").value;
