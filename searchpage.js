@@ -81,14 +81,6 @@ var booksArray = [
         a.style.backgroundImage = `url(${book.image})`;
     
         a.appendChild(h4);
-
-        // a.addEventListener("mouseover" ,function(){
-        //     a.style.filter ="blur(2px)"
-        //     p.style.display = "block"
-        //     p.style.filter = "blur(0)"
-        // })
-
-    
         catalogueBox.appendChild(a);
     
         a.addEventListener("click", function(event) {
@@ -99,15 +91,13 @@ var booksArray = [
             console.log(bookingSystemTitles);
             localStorage.setItem("booktitle", JSON.stringify(bookingSystemTitles));
 
-                document.body.style.transition = "opacity 2s"; // Add a transition effect
-                document.body.style.opacity = 0;
-            
+
+            document.body.style.transition = "opacity 0.5s"; // Set the transition property
+            document.body.style.opacity = 0; // Start the transition immediately
             
             setTimeout(function() {
-                window.location = "applicationForm.htm"; // Navigate to the new page after the transition
-            }, 900); // Delay the navigation to allow the fade-out effect to complete
-
-
+                window.location.href = 'applicationForm.htm'; // Navigate to the new page after the transition
+            }, 500);
             
         });
     }

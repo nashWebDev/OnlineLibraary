@@ -8,7 +8,7 @@
 
 body{
   scroll-behavior: smooth;
-  background-image: url(img/DSC_0021.jpg);
+  background-image:  url(img/DSC_0021-min.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -173,16 +173,6 @@ img {vertical-align: middle;}
   background-color: #717171;
 }
 
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
@@ -304,7 +294,7 @@ h2{
   margin: 5px;
   width: 17%;
   height: 300px; /* Set a fixed height */
-  transition: 1s;
+  transition: 0.5s;
   overflow: hidden; /* Ensure child elements don't overflow */
 }
 
@@ -322,7 +312,7 @@ h2{
 
 .catalogue a:hover{
   background-color: black;
-  box-shadow: 0 1px 1px 1px black;
+  box-shadow: 0 3px 3px 3px black;
 }
 
 .catalogue h4 {
@@ -338,49 +328,41 @@ h2{
 }
 
 /*catalogue button*/
-.cataloguebtn{
-  margin: 10px;
-  margin-top: 20px;
-  border-radius: 20px;
-  width: 20%;
-  height: 10%;
-  padding: 10px;
-  background-color: var(--Bereablue);
-  color: white;
-  text-shadow: 0 1px 1px whitesmoke;
+.btn {
+  width: 50%;
+  margin-bottom: 10px;
   border: 2px solid black;
-  transition: 1s;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  background-color: rgb(255, 255, 255 , 0,5);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  position: relative;
+  bottom: -15px;
+  transition: 0.5s;
 }
 
-.cataloguebtn:hover{
-  border: 2px solid cyan;
-  text-shadow: 0 2px 2px cyan;
-  box-shadow: 0 2px 2px 1px cyan;
-  animation: shake 2s infinite ease-in-out; /* Apply animation only on hover */
+.btn:hover{
+box-shadow: 0 9px var(--Bereablue);
 }
 
-
-@keyframes shake {
-  0% {
-    transform: translate(0, 0);
-  }
-  25% {
-    transform: translate(-5px, -5px);
-  }
-  75% {
-    transform: translate(5px, 5px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
+.btn:active {
+background-color: var(--Bereablue);
+box-shadow: 0 5px #666;
+transform: translateY(4px);
 }
-
 
 
 /*foother*/
 footer{
     border: 2px solid black;
     background-color: var(--Bereablue);
+    margin-top: 10px;
     color: var(--white);
     display: flex;
     padding: 10px;
@@ -416,4 +398,11 @@ footer{
 }
 ::-webkit-scrollbar-button{
   background-color: var(--Bereablue);
+}
+@media only screen and (max-width: 500px) {
+  .catalogue a:hover{
+    width: 200%;
+    background-color: black;
+    box-shadow: 0 3px 3px 3px black;
+  }
 }
