@@ -25,7 +25,7 @@
 
     <header>
         <nav>
-            <img src="img/berea logo.jfif" alt="logo" class="logo">
+            <img src="img/applogo_white.png" alt="logo" class="logo">
             <h3 >BEREA GROUP COLLEGES</h3>
 
             <div class="pages">
@@ -61,12 +61,12 @@
 
 <div class="slideshow-container">
 
-<div class="mySlides fade">
-  <img src="img/berea logo.jfif" style="width:100%">
+<!-- <div class="mySlides fade">
+  <img src="img/applogo_white.png" > -->
 
 </div>
 
-<div class="mySlides fade">
+<!-- <div class="mySlides fade">
   <img src="img/berea logo.jfif" style="width:100%">
 </div>
 
@@ -74,7 +74,13 @@
   <img src="img/btc3rdpick.jfif" alt="mountain" style="width:100%">
 </div>
 
-</div>
+</div> -->
+
+
+<!-- slide box -->
+<div id="slidebox" style="width:300%; height:50%;"></div>
+
+
 <br>
 
 <div style="text-align:center">
@@ -90,19 +96,21 @@
 <!--hottest -->
 <div>
 
-    <h2 id="hottest">HOTTEST</h2>
+    <div class="blueOverlay">
+        <h2 id="hottest">HOTTEST</h2>
 
-    <div class="box">
-        <div class="bookbox">
-            <img src="img/pjLightning.jfif" alt="lightning theif">
-        </div>
-        <div class="bookbox">
-            <img src="img/pjSea.jfif" alt="sea of monsters">
+        <div class="box">
+            <div class="bookbox">
+                <img src="img/pjLightning.jfif" alt="lightning theif">
+            </div>
+            <div class="bookbox">
+                <img src="img/pjSea.jfif" alt="sea of monsters">
 
-        </div>
-        <div class="bookbox">
-            <img src="img/pjLastoly.jfif" alt="last">
+            </div>
+            <div class="bookbox">
+                <img src="img/pjLastoly.jfif" alt="last">
 
+            </div>
         </div>
     </div>
     
@@ -111,23 +119,28 @@
 
 <!--search bar and display-->
 
-<div class="seachbox">
-    <h2 class="glassy-title">SEARCH BAR</h2>
-    <div class="truecenter">
-        <input type="text" id="myInput" onkeyup="search()" placeholder="SEARCH BAR" title="type the title of your book">
-        <button id="fullSearch" onclick="fullsearch()">search</button>
-    </div>
+    <div class="seachbox">
 
-    <div class="catalogue" id="catalogue">
-        
+
+        <h2 class="glassy-title">SEARCH BAR</h2>
+
+        <div class="truecenter">
+            <input type="text" id="myInput" onkeyup="search()" placeholder="SEARCH BAR" title="type the title of your book">
+            <button id="fullSearch" onclick="fullsearch()">search</button>
+        </div>
+<div class="grayoverlay">
+    <div class="specializedCenter">
+        <div class="catalogue" id="catalogue">
+        </div>
+            
+        </div>
     </div>
 </div>
-
 <!--catalogue-->
 
-<div class="truecenter">
+        <div class="truecenter">
     <button class="btn" id="cataloguebtn">VIEW FULL CATALOGUE</button>   
-</div>
+        </div>
 
 
 <div style="height: 15px;width: 100%;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>

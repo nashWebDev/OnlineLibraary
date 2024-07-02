@@ -106,6 +106,7 @@ var booksArray = [
         booksArray.forEach(function(book) {
             listArray(book);
         });
+       
     });
     
     function fullsearch() {
@@ -135,27 +136,54 @@ var booksArray = [
     
 
 
-//slide show
+// //slide show
 
-let slideIndex = 0;
-showSlides();
+// function showSlides() {
+//   let i;
+//   let slides = document.getElementsByClassName("mySlides");
+//   let dots = document.getElementsByClassName("dot");
 
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 3500); // Change image every 2 seconds
+
+
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";  
+//   }
+//   slideIndex++;
+//   if (slideIndex > slides.length) {slideIndex = 1}    
+//   for (i = 0; i < dots.length; i++) {
+//     dots[i].className = dots[i].className.replace(" active", "");
+//   }
+//   slides[slideIndex-1].style.display = "block";  
+//   dots[slideIndex-1].className += " active";
+//   setTimeout(showSlides, 3500); // Change image every 2 seconds
+// }
+
+
+var imgArray = [
+    { title: "img1", img: "img/applogo_white.png" },
+    { title: "img2", img: "img/applogo_blue.png" },
+    { title: "img3", img: "img/applogo_blu_002.png" }
+];
+
+var slideIndex = 0;
+
+function newslide() {
+    var slidebox = document.getElementById("slidebox");
+    if (slidebox) {
+        slidebox.style.backgroundImage = `url(${imgArray[slideIndex].img})`;
+        slideIndex = (slideIndex + 1) % imgArray.length;
+    }
 }
+
+// Set the initial slide
+newslide();
+
+// Change image every 3.5 seconds
+setInterval(newslide, 3500);
+
+
+
+
 var body = document.querySelector("body")
 
 function openNav() {

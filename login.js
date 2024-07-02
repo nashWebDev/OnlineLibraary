@@ -86,4 +86,4 @@ function getBodyHeight() {
     return Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
   }
 
-  document.getElementById("foot").style.top = (getBodyHeight()/5)+"px";
+  document.getElementById("foot").style.top = (getBodyHeight()/3)+"px";

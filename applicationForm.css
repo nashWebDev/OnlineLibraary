@@ -1,4 +1,6 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 :root {
     --Bereablue: #27348b;
@@ -40,7 +42,7 @@ header{
     color: whitesmoke;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 600;
+    font-weight: bold 700;
     font-style: normal;
     text-align: center;
     justify-content: center;
@@ -100,9 +102,9 @@ section h1{
 
 .loginBox {
     position: relative;
-    border: 2px solid black;
+    /* border: 1px solid black; */
     box-shadow: 0 2px 2px black;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     background-color:rgba(255, 255, 255, 0.8);
     text-align: center;
     justify-content: center;
