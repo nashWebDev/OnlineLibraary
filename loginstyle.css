@@ -273,13 +273,11 @@ footer {
         margin: 10px 0;
     }
 
-    footer {
-        display: none;
-    }
+    
 }
 
 @media only screen and (max-width: 480px) {
-    .pages a {
+    nav .pages a {
         display: none;
     }
 
@@ -303,7 +301,5 @@ footer {
     .loginBox{
       width: 100%;
     }
-    footer {
-        display: none;
-    }
+   
 }
