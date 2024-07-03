@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: 'CustomFont';
+    src:url('img/AbhayaLibre-Bold.ttf') format('truetype'); 
+}
+
+
 
 :root {
     --Bereablue: #27348b;
@@ -6,14 +11,15 @@
     --bereagray:#6D6E71;
   }
 
+*{
+  font-family: "CustomFont", sans-serif;
+}
+
+
 body{
   scroll-behavior: smooth;
   background: linear-gradient(to bottom, rgba(87, 87, 88, 0.377), rgba(18, 18, 19, 0.377)), 
-                url('img/DSC_0021-min.jpg');
-                font-family: "Montserrat", sans-serif;
-                font-optical-sizing: auto;
-                font-weight: bold 700;
-                font-style: normal;
+                url('img/DSC_0021-min.jpg');             
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -189,7 +195,7 @@ nav .pages{
   background-size: cover;
   background-position: center;
   transition: background-image 1s ease-in-out;
-  clip-path: circle();
+  clip-path:circle();
 }
 
 #slidebox img{
@@ -255,7 +261,6 @@ h2{
     font-weight: bold;
     color: #f00; /* Red color for fire effect */
     /* text-shadow: 0 0 20px #f00, 0 0 40px #f00, 0 0 80px #f00, 0 0 160px ; */
-
     position: relative;
 
     animation: burn 1s infinite alternate;
@@ -278,7 +283,6 @@ h2{
 .glassy-title {
   color: white; /* Text color */
   font-size: 3em; /* Adjust the size as needed */
-  font-family: 'Arial', sans-serif; /* Adjust the font as needed */
   text-align: center; /* Center the title */
   padding: 10px 20px;
   background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
@@ -380,7 +384,7 @@ h2{
 
 .catalogue a:hover{
   background-color: black;
-  box-shadow: 0 3px 3px 3px black;
+  box-shadow: 0 5px 5px 5px black , 2px 2px 2px 2px gray;
 }
 
 .catalogue h4 {
