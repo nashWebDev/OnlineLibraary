@@ -21,6 +21,7 @@ var log2 = document.getElementById("log2")
         localStorage.setItem('loginFormvalsForBookingSystem' , JSON.stringify(bookingSystemLoginVal))
 
         if (emailArray.includes(email)) {
+    
             setTimeout(function() {
                 document.body.style.transition = "opacity 2s"; // Add a transition effect
                 document.body.style.opacity = 0;
@@ -47,6 +48,8 @@ log2.addEventListener("submit",function(event){
     localStorage.setItem('loginFormvalsForBookingSystem' , JSON.stringify(bookingSystemLoginVal))
 
     if (emailArray.includes(email)) {
+
+      
         setTimeout(function() {
             document.body.style.transition = "opacity 2s"; // Add a transition effect
             document.body.style.opacity = 0;
@@ -80,10 +83,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-//footer to appear at bottom
-function getBodyHeight() {
-    let body = document.body, html = document.documentElement;
-    return Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
-  }
+function glow(){
+    var logbox = document.getElementById("loginBox")
 
-  document.getElementById("foot").style.top = (getBodyHeight()/3)+"px";
+    logbox.style.boxShadow = " 1px 1px 1px cyan"
+}
+
+
+//footer to appear at bottom
+// function getBodyHeight() {
+//     let body = document.body, html = document.documentElement;
+//     return Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+//   }
+
+//   document.getElementById("foot").style.top = (getBodyHeight()/3)+"px";
