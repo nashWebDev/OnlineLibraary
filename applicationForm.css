@@ -52,9 +52,22 @@ header{
     font-style: normal;
 }
 #stateofBook{
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    
     width: 100%;
     text-align: center;
 
+}
+
+.box{
+    border: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 5px;
+    padding: 5px;
+    transition: 1s;
 }
 
 
