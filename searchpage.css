@@ -1,6 +1,9 @@
+
 @font-face {
     font-family: 'CustomFont';
-    src:url('img/AbhayaLibre-Bold.ttf') format('truetype'); 
+    src: url('img/AbhayaLibre-Bold.ttf') format('woff2');
+  font-weight: bold;
+  font-style: normal;
 }
 
 
